@@ -1,0 +1,626 @@
+/*Основная форма*/
+.header{
+	background-color: #0093FF !important;
+	height: 45px !important;
+	display: flex !important;
+}
+/*логотип в форме*/
+.logo{
+	height: 40px;
+	width: 40px; 
+	border: 2px solid gray; 
+	border-radius: 50%; 
+	background-color: #D9D9D9; 
+	left: 30px; 
+	border-color: #D9D9D9;
+}
+
+
+
+
+/* Стили для страницы index.html */
+.container{
+	height:90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Форма в форме (синия)*/
+.internalWindow{
+	background-color: 71ACFF; 
+	border-radius: 50px; 
+	width: 35%; 
+	height: 65%; 
+	padding: 25; 
+	text-align: center; 
+}
+/*Авторизация*/
+.entrance{
+	margin-left:auto; 
+	margin-right: auto;
+	width: 450; 
+	height: 40; 
+	font-size: 32; 
+	font-family: Arial;
+	color: #FFFFFF;
+}
+/*почта*/
+.emailPassword{
+	margin-top: 5%; 
+	margin-bottom: 15%;
+}
+/*пароль*/
+.email{
+	background-color: 9E9E9E;
+	height: 50; 
+	width: 80%; 
+	border-radius: 20px; 
+	font-size: 24; 
+	border: 0; 
+	margin-bottom: 15%;
+}
+/*растояние от авторизацией до кнопки воити*/
+.password{
+	height: 50; 
+	width: 80%; 
+	border-radius: 20px; 
+	font-size: 24; 
+	border: 0;
+}
+/*воити*/
+.buttonEnter{
+	height: 50; 
+	width: 35%; 
+	border-radius: 20px; 
+	font-size: 24; 
+	color: #4A3563; 
+	background-color: #FFFFFF; 
+	border: 0;
+}
+/*обозначение курсора на кнопку входа*/
+.buttonEnter:hover{
+	cursor:pointer;
+}
+
+
+
+
+/* Стили для страницы tableScreen.html */
+/*Главная*/
+.main{
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 22; 
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	margin-left:auto; 
+	margin-right: auto;
+	margin: 1% 0% 15% 45%; 
+}
+.homePage{
+	padding: 0px 50px 0px 50px;
+}
+/*Админ*/
+.admin{
+	color: #FFFFFF;
+	font-size: 18; 
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	margin-left:auto; 
+	margin-right: auto;
+	margin: 1% 2% 15% auto; 
+}
+/*Вкладки*/
+.tabs{
+	display: flex;
+	list-style-type: none;
+	grid-gap: 16px;
+	margin-top: 15px;
+}
+.tabs ul {
+	padding:0px;
+}
+.tabs li{
+	float: left;
+	position: relative;
+}
+.tabs a{
+	float: left;
+	padding: 10px 40px;
+	text-decoration: none;
+	color: black;
+	background: white;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	/*тень кнопки*/
+	box-shadow: 1px 3px 1px 1px rgba(0, 0, 0, 0.5);
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+.tabs .active{
+	z-index: 3;
+}
+.tabs .active a{
+	color: black;
+	/*box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5);*/
+	box-shadow: 0 3px 3px #575555 inset; 
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.tabs li::before, .tabs li::after,
+.tabs li a::before, .tabs li a::after {
+	position: absolute;
+	bottom: 0;
+}
+.tabs li:first-child::before, .tads li:first-child a::before,
+.tabs .active::after, .tabs . active::before,
+.tabs .active a::after, .tabs . active a::before{
+	content:"";
+}
+.tabs .active::before, .tabs . active::after{
+	background:white;
+	z-index: 1;
+}
+.tabs li::before, .tabs li::after{
+	background: #ddc385;
+	width: 10px;
+	height: 10px;
+}
+.tabs li::before{
+	left: -10px;
+}
+.tabs li::after{
+	right: -10px;
+}
+.tabs li a::after, .tabs li a::before{
+	width: 20px;
+	height:20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: #222;
+	z-index: 2;
+}
+.tabs .active a::after, .tabs .active a::before{
+	background: white;
+}
+.tabs li:first-child.active a::before,
+.tabs li:last-child.active a::after{
+	background: #222;
+}
+.tabs li a::before{
+	left: -20px;
+}
+.tabs li a::after{
+	right: -20px;
+}
+/*Кнопка добавление вкладки*/
+.addingATab{
+	background-color: white;
+	height: 38px;
+	width: 38px;
+	border-radius: 10px;
+	border: none;
+	/*тень кнопки*/
+	box-shadow: 1px 3px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/*курсор у кнопки добавление вкладки*/
+.addingATab:hover{
+	cursor:pointer;
+}
+/*над таблицей поиск и фильтер*/
+.aboveTheTable{
+	margin-top: 45px;
+	margin-bottom: 15px;
+	margin-left: 80px;
+	margin-right: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+/*поиск*/
+.searchLine{
+	color: #000000;
+	height: 45px;
+	border-top:none;
+	border-left: none;
+	border-right: none;
+	/*margin-left: 75px;*/ 
+}
+/*Кнопка поиска*/
+.byttonLine{
+	color: #FFFFFF;
+	height: 45px;
+	width: 45px;
+}
+.searchLine:focus{
+	outline: none;
+}
+/*кнопка фильтра*/
+.filter{
+	background: #FFFFFF;
+	height: 38px;
+	width: 38px;
+	border-radius: 10px;
+	border: none;
+	/*тень кнопки*/
+	box-shadow: 1px 3px 1px 1px rgba(0, 0, 0, 0.5);
+	/*margin: 1% 0% 0% 70%;
+	background: url('imag.JPG');
+	background: src=url(imag.png) no-repeat;*/
+	
+}
+/*курсор у кнопки фильтра*/
+.filter:hover{
+	cursor:pointer;
+}
+/*внешний фон таблицы (округленный синии)*/
+.backgroundExternal{ 
+	border-radius: 40px; 
+	height: 55%; 
+}
+/*строки таблицы в синей форме в ширене*/
+.border-none {
+	border-collapse: collapse;
+	/*border: none;*/
+	table-layout: fixed;
+	width:100%;
+}
+
+/*.border-none td {
+	border: 1px solid #0093FF;
+}*/
+/*цвет для столбцов в верху(синии)*/
+.backgroundText{
+	color: #71ACFF;
+	background-color: #FFFFFF; 
+	height: 55%; 
+	margin: 1px 1px 1px 1px; 
+	padding: 20; 
+	text-align: center;
+	border: 0;
+	font-family: Geneva, Arial, Helvetica, sans-serif;;
+}
+/*цвет строк под столбцами (черный)*/
+.backgroundLinesText{
+	color: #000000;
+	background-color: #FFFFFF; 
+	height: 70%; 
+	margin: 1px 1px 1px 1px; 
+	padding: 35; 
+	text-align: center;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+/*горизонтальная рамка*/
+.horizintalFrames td {
+	border: 1px solid #0093FF; 
+	border-left: none; 
+	border-right: none; 
+	border-collapse: collapse;
+	border-top: 0;
+	height: 50px;
+}​
+
+/*.border-none tr:first-child td {
+	border-top: none;
+}*/
+
+/*.border-none tr:last-child td {
+	border-bottom: none;
+}*/
+
+/*.border-none tr td:first-child {
+	border-left: none;
+}*/
+
+/*.border-none tr td:last-child {
+	border-right: none;
+}*/
+/*курсор у таблицы*/
+.border-none tr:hover td{
+	background: #c2e4ff;
+	cursor:pointer;
+}
+/*цвет таблицы*/
+.backgroundTable{
+	border-radius: 25px; 
+	border: 1px solid #0093FF;
+	width: auto; 
+	height: 80%; 
+	align-items: center;
+	margin: 5px 0px 5% 0%; 
+	padding: 20px 20px 20px 20px;
+	text-align: center;
+}
+/*.backgroundTable::-webkit-scrollbar {
+  width: 0;
+}*/
+.top-left-corner{
+	border-top-left-radius: 40px;
+}
+.top-right-corner{
+	border-top-right-radius: 40px;
+}
+.bottom-left-corner{
+	border-bottom-left-radius: 40px;
+}
+.bottom-right-corner{
+	border-bottom-right-radius: 40px;
+}
+
+.buttonDiv{
+	display: flex;
+	grid-gap:16px;
+}
+
+/*кнопка добавления данных*/
+.buttonAddition{
+	height: 38; 
+	width: 200px; 
+	border-radius: 10px; 
+	font-size: 16; 
+	color: #FFFFFF; 
+	background-color: #3F8EFC; 
+	border: 0;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+/*курсор у кнопки добавления данных*/
+.buttonAddition:hover{
+	cursor:pointer;
+}
+/*кнопка загрузки данных*/
+.buttonLoading{
+	height: 38; 
+	width: 200px; 
+	border-radius: 10px; 
+	font-size: 16; 
+	color: #FFFFFF; 
+	background-color: #3F8EFC; 
+	border: 0;
+	font-family: Geneva, Arial, Helvetica, sans-serif;'
+}
+/*курсор у кнопки загрузки данных*/
+.buttonLoading:hover{
+	cursor:pointer;
+}
+/*кнопка выгрузки данных*/
+.buttonUnloading{
+	height: 38; 
+	width: 200px; 
+	border-radius: 10px; 
+	font-size: 16; 
+	color: #FFFFFF; 
+	background-color: #3F8EFC; 
+	border: 0;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+/*курсор у кнопки выгрузки данных*/
+.buttonUnloading:hover{
+	cursor:pointer;
+}
+/*затемнение модального окна*/
+.modal{
+    position: fixed;
+    top: 0;
+	left: 0;
+    background-color: rgba(0, 0, 0, 0.616);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	z-index: 4;
+}
+/*модальное окно*/
+.modal-body{
+    background-color: white;
+    width: 50%;
+    border-radius: 10px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+.header-border{
+	border: none;
+	border-bottom: 1px solid #0093FF;
+}
+.modal-body h2{
+    margin-bottom: 20px;
+    text-align: center;
+	font-weight: 50;
+	color: #0093FF;
+}
+.modal-main{
+	padding: 0px 30px 30px 30px;
+}
+
+/*Чекбоксы с НАЗВАНИЯМИ ГРУПП*/
+.checkbox {
+	border: none;
+	border-bottom: 1px solid #0093FF;
+	display: flex;
+	justify-content:space-between;
+	align-items: center
+}
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+	display: none;
+	/*appearance: none;
+	-webkit-appearance: none;*/
+}
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    width:100%;
+    /*Пробел между квадратиком и надписью чекбокса*/
+    padding-left: 30px;
+	margin: 10px 0px;
+    font-size: 20px;
+}
+
+.checkbox label:hover{
+	cursor:pointer;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+}
+/*Квадратик чекбокса*/
+.checkbox label::before{
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+    border: 1px solid #0093FF;
+    left: 0px;
+    
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+/*Галочка чекбокса*/
+.checkbox label::after {
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    left: 4px;
+    top: 7px;
+	border-color: #34A853;
+}
+/*Скрытие галочки по умолчанию*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+/*Появление галочки при выборе чекбокса*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: " ";
+}
+
+.checkboxes2layer{
+	display: none;
+}
+
+/*Чекбоксы с НАЗВАНИЯМИ АТРИБУТОВ*/
+.checkbox2layer{
+	padding-left: 30px;
+	border: none;
+}
+.checkbox2layer input[type="checkbox"] {
+    opacity: 0;
+	display: none;
+	/*appearance: none;
+	-webkit-appearance: none;*/
+}
+.checkbox2layer label {
+    position: relative;
+    display: inline-block;
+    width:100%;
+    /*Пробел между квадратиком и надписью чекбокса*/
+    padding-left: 30px;
+	margin: 10px 0px;
+    font-size: 20px;
+}
+.checkbox2layer label:hover{
+	cursor:pointer;
+}
+.checkbox2layer label::before,
+.checkbox2layer label::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+}
+/*Квадратик чекбокса*/
+.checkbox2layer label::before{
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+    border: 1px solid #0093FF;
+    left: 0px;
+    
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+/*Галочка чекбокса*/
+.checkbox2layer label::after {
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    left: 4px;
+    top: 7px;
+	border-color: #34A853;
+}
+/*Сокрытие галочки по умолчанию*/
+.checkbox2layer input[type="checkbox"] + label::after {
+    content: none;
+}
+/*Появление галочки при выборе чекбокса*/
+.checkbox2layer input[type="checkbox"]:checked + label::after {
+    content: " ";
+}
+
+/*Группа кнопок*/
+.form-group{
+    margin-top: 50px;
+}
+.form-control{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: none;
+    border-bottom: 1px solid #006266;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:800px) {
+    .table-responsive{
+        overflow-x: scroll;
+    }
+}
+.btn{
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #b8b8b8;
+}
+.btn-primary{
+    background-color: dodgerblue;
+    color: white;
+}
+.btn:active{
+    transform: scale(.9);
+}
+.btn-success{
+    background-color: #2DC200;
+    color: white;
+}
+.btn-danger{
+    background-color: #FF0048;
+    color: white;
+}

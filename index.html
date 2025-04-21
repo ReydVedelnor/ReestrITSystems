@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External CSS Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="action_page.php" method="post">
+		<div class="imgcontainer">
+			<header class="header"> <!--style="background-color: #0093FF; height: 45px; display: flex;"-->
+			</header>
+		</div>
+  
+		<div class="container">
+			<!--"форма"-->
+			<div class="internalWindow"> <!--style="background-color: #71ACFF; border-radius: 50px; width: 65%; height: 65%; margin: 1% 3% 2% 3%; padding: 50; text-align: center;"-->
+				<p class="entrance"> <!--style="margin-left:auto; margin-right: auto; width: 577; height: 40; font-size: 32; font-family: Arial"-->Авторизация</p>
+				<!--Растояние между Авторизацией и кнопкой входа-->
+				<div class="emailPassword"> <!--style="margin-top: 10%; margin-bottom: 10%;"-->
+				<!--Обозначения окна Почты-->
+					<input type="text" placeholder="Почта" required class="email"/> <!--style="height: 80; width: 60%; border-radius: 12px; font-size: 24; border: 0; margin-bottom: 5%;"/-->
+					<!--Обозначения окна Пароля-->
+					<input type="password" placeholder="Пароль" name="psw" required class="password"/> <!--style="height: 80; width: 60%; border-radius: 12px; font-size: 24; border: 0;"/-->
+				</div>
+				<!--Реализация кнопки Войти-->
+				<button type="submit" class="buttonEnter"> <!--style="height: 80; width: 40%; border-radius: 10px; font-size: 24; color: #00BFFF; background-color: #FFFFFF; border: 0;"-->Войти</button>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>
