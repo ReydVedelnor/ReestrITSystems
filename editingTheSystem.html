@@ -1,0 +1,124 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>External CSS Example</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$("li").click(function(e) {
+			  e.preventDefault();
+			  $("li").removeClass("active");
+			  $(this).addClass("active");
+			});
+		});
+	</script>
+</head>
+
+<body>
+    <div class="imgcontainer">
+		<header class="header"> <!--style="background-color: #00BFFF; height: 45px; display: flex;"-->
+			<p class="organaization">Гарант</p>
+			<p class="main">Редактирование системы</p>
+			<p class="admin">admin</p>
+		</header>
+	</div>
+	<div class="homePage">
+		<div class ="tabs">
+			<ul class ="tabs">
+				<li class= "active" ><a style="width: 150px" href = "#Вкладка1">
+					<div style="display: flex; justify-content: center;">
+						Общие
+					</div>
+				</a></li>
+				<li><a style="width: 150px" href="#Вкладка2">
+					<div style="display: flex; justify-content: center;">
+						Деньги
+					</div>
+				</a></li>
+				<li><a style="width: 150px" href="#Вкладка3">
+					<div style="display: flex; justify-content: center;">
+						Импортозамещение
+					</div>
+				</a></li>
+				<li><a style="width: 150px" href="#Вкладка3">
+					<div style="display: flex; justify-content: center;">
+						Без группы
+					</div>
+				</a></li>
+			</ul>
+		</div>
+		
+		<div class="backgroundExternal bg"> 
+			<div class="bTS">
+				<div class="table-formation">
+					<p class="heder-editing">Атрибуты</p>
+					<p class="heder-editing">Значения</p>
+				</div>
+				<div class="scrollOfAtributes">
+					<div class="table-formation">
+						<p class="label-editing">Система</p>
+						<input class="input-editing" type="text" />
+						<div class="form-row"></div>
+						<p class="label-editing">Услуга</p>
+						<input class="input-editing" type="text" />
+						<div class="form-row"></div>
+						<p class="label-editing">Наименование системы</p>
+						<input class="input-editing" type="text" />
+						<div class="form-row"></div>
+						<p class="label-editing">Краткое наименование системы</p>
+						<input class="input-editing" type="text" />
+						<div class="form-row"></div>
+						<p class="label-editing">Полное наименование системы</p>
+						<input class="input-editing" type="text" />
+					</div>
+				</div>
+				<!--<table class="border-none-editing">
+					<thead style="position: sticky; inset-block-start: -20px; background-color: white;">
+						<tr class="horizintalFramesHeader">
+							<td id="r" class="backgroundText "> <!--top-left-corner
+								<div class="filter-text" style="width: 60%;">Атрибуты</div> 
+							</td>
+							<td class="backgroundText"> 
+								<div class="filter-text" style="width: 60%;">Значения</div>
+							</td>
+						</tr>
+					</thead>
+					<tbody class="tbody">
+						<tr class="form-row">
+							<td style="border-bottom: 1px solid #68b6ff;"><p class="label-editing">Система</p></td>
+							<td style="border-bottom: 1px solid #68b6ff;"><input class="input-editing" type="text" /></td>
+						</tr>
+						<tr class="form-row">
+							<td style="border-bottom: 1px solid #68b6ff;"><p class="label-editing">Услуга</p></td>
+							<td style="border-bottom: 1px solid #68b6ff;"><input class="input-editing" type="text" /></td>
+						</tr>
+						<tr class="form-row">
+							<td class="label-editing">Наименование системы</td>
+							<td><input class="input-editing" type="text" /></td>
+						</tr>
+						<tr class="form-row">
+							<td class="label-editing">Краткое наименование системы</td>
+							<td><input class="input-editing" type="text" /></td>
+						</tr>
+						<tr class="form-row">
+							<td class="label-editing">Полное наименование системы</td>
+							<td><input class="input-editing" type="text" /></td>
+						</tr>
+					</tbody>
+				</table>-->
+				
+			</div>
+		</div>
+		<div style="display: flex; justify-content: right;">
+			<div class="buttonDiv">
+				<button class="btn btn-danger">Отменить</button>
+				<button class="btn btn-success">Сохранить</button>
+			</div>
+		</div>
+	</div>
+</body>

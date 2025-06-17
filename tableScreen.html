@@ -5,28 +5,60 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>External CSS Example</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$("li").click(function(e) {
+			  e.preventDefault();
+			  $("li").removeClass("active");
+			  $(this).addClass("active");
+			});
+		});
+	</script>
 </head>
 
 <body>
-    <div class="imgcontainer">
-		<header class="header"> <!--style="background-color: #00BFFF; height: 45px; display: flex;"-->
-			<p class="main">Главная</p>
-			<p class="admin">admin</p>
-		</header>
+	<div class="header"> <!--style="background-color: #00BFFF; height: 45px; display: flex;"-->
+		<div class="dropdown">
+			<img style='width: 20px;' type="images" src='images/menus.png'>
+			<div class="dropdown-content">
+				<a href="groupes.php">Группы</a>
+				<a href="">Атрибуты</a>
+				<a href="historyOfChanges.html">История изменений</a>
+			</div>
+		</div>
+		<p class="main">Главная</p>
+		<p class="admin">admin</p>
 	</div>
 	
 	<div class="homePage">
 		<div class ="tabs">
 			<ul class ="tabs">
-				<li class= "active"><a href = "#Вкладка1">Вкладка1</a></li>
-				<li><a href="#Вкладка2">Вкладка2</a></li>
-				<li><a href="#Вкладка3">Вкладка3</a></li>
+				<li class= "active" ><a style="width: 150px" href = "#Вкладка1">
+					<div style="display: flex; justify-content: center;">
+						Вкладка1
+						<img style='width:17px; position: absolute; right: 10px;' type="images" src='images/cross.png' />
+					</div>
+				</a></li>
+				<li><a style="width: 150px" href="#Вкладка2">
+					<div style="display: flex; justify-content: center;">
+						Вкладка2
+						<img style='width:17px; position: absolute; right: 10px;' type="images" src='images/cross.png' />
+					</div>
+				</a></li>
+				<li><a style="width: 150px" href="#Вкладка3">
+					<div style="display: flex; justify-content: center;">
+						Вкладка3
+						<img style='width:17px; position: absolute; right: 10px;' type="images" src='images/cross.png' />
+					</div>
+				</a></li>
 				<button title="addingATab" class="addingATab"><img style='width:27px' type="images" src='images/addition.png'></button>
 			</ul>
 		</div>
 		<div class= "aboveTheTable">
-				<td id="r" >
+				<td>
 					<div style="display:flex; justify-content:center">
 						<div style="align-self: flex-end;">
 							<!--button class="byttonLine"--><img type="images" src='images/search1.png' /><!--/button-->
@@ -70,53 +102,79 @@
 		<div class="backgroundExternal"> 
 			<div class="backgroundTable">
 				<table class="border-none">
-					
-					<tbody>
-					<tr class="horizintalFrames" onclick="location.href='index.html'">
-						<td id="r" class="backgroundText top-left-corner"> <button title="filter" class="filter"><img type="images" src='images/imag.png' /></button> Система </td>
-						<td class="backgroundText"> <button title="filter" class="filter"><img type="images" src='images/imag.png' /></button> Услуга</td>
-						<td class="backgroundText"> <button title="filter" class="filter"><img type="images" src='images/imag.png' /></button> Наименование системы</td>
-						<td class="backgroundText"> <button title="filter" class="filter"><img type="images" src='images/imag.png' /></button> Краткое наименование системы</td>
-						<td class="backgroundText top-right-corner"> <button title="filter" class="filter"><img type="images" src='images/imag.png' /></button> Полное наименование системы</td>
-					</tr>
-					<tr  class="horizintalFrames">
-						<td class="backgroundLinesText" onclick="#"> Гарант</td>
-						<td class="backgroundLinesText" onclick="#"> LBA.61 2025</td>
-						<td class="backgroundLinesText" onclick="#"> Гарант</td>
-						<td class="backgroundLinesText" onclick="#"> Гарант</td>
-						<td class="backgroundLinesText" onclick="#"> Информационно-справочная система “Гарант”</td>
-					</tr>
-					<tr class="horizintalFrames">
-						<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
-						<td class="backgroundLinesText" onclick="#"> LBA.61 2025</td>
-						<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
-						<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
-						<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА)</td>
-					</tr>
+					<thead style="position: sticky; inset-block-start: -20px; background-color: white;">
+						<tr class="horizintalFramesHeader">
+							<td id="r" class="backgroundText "> <!--top-left-corner-->
+								<button title="filter" class="filter" id="filterSystemsButton">
+									<img type="images" src='images/imag.png'>
+								</button> 
+								<div class="filter-text" style="width: 60%;">Система</div> 
+							</td>
+							<td class="backgroundText"> 
+								<button title="filter" class="filter" id="filterServicesButton">
+									<img type="images" src='images/imag.png'>
+								</button> 
+								<div class="filter-text" style="width: 60%;">Услуга</div>
+							</td>
+							<td class="backgroundText">
+								<button title="filter" class="filter" id="filterNaimSystemsButton">
+									<img type="images" src='images/imag.png'>
+								</button> 
+								<div class="filter-text" style="width: 60%;">Наименование системы</div>
+							</td>
+							<td class="backgroundText insideTheHeader"> 
+								<button title="filter" class="filter" id="filterShortNaimSystemsButton">
+									<img type="images" src='images/imag.png'>
+								</button>
+								<div class="filter-text" style="width: 60%;">Краткое наименование системы</div>
+							</td>
+							<td class="backgroundText insideTheHeader"> <!--top-right-corner-->
+								<button title="filter" class="filter" id="filterFullNaimSystemsButton">
+									<img type="images" src='images/imag.png'>
+								</button>
+								<div class="filter-text" style="width: 60%;">Полное наименование системы</div>
+							</td>
+						</tr>
+					</thead>
+					<tbody id="tbody" class="tbody">
+						<!--<tr class="horizintalFrames">
+							<td class="backgroundLinesText" onclick="#"> Гарант</td>
+							<td class="backgroundLinesText" onclick="#"> LBA.61 2025</td>
+							<td class="backgroundLinesText" onclick="#"> Гарант</td>
+							<td class="backgroundLinesText" onclick="#"> Гарант</td>
+							<td class="backgroundLinesText" onclick="#"> Информационно-справочная система “Гарант”</td>
+						</tr>
+						<tr class="horizintalFrames">
+							<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
+							<td class="backgroundLinesText" onclick="#"> LBA.61 2025</td>
+							<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
+							<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
+							<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА)</td>
+						</tr>-->
 					</tbody>
 				</table>
 			</div>
 			<div style="display:flex; justify-content:space-between"> <!--style="margin-top: 10px;"-->
 				<div class="buttonDiv">
-					<button title="buttonAddition" class="buttonAddition"> Добавление данных </button>
-					<button title="buttonLoading" class="buttonLoading"> Загрузка из Excel</button>
-					<button title="buttonUnloading" class="buttonUnloading"> Выгрузить в Excel</button>
+					<button title="buttonAddition" class="btButton"> Добавление данных </button>
+					<button title="buttonLoading" class="btButton"> Загрузка из Excel</button>
+					<button title="buttonUnloading" class="btButton"> Выгрузить в Excel</button>
 				</div>
-				<button title="filter" class="filter"><img type="images" src='images/imag.png' /></button>
+				<button title="filter" class="filterBottom" id="myFilterButton"><img type="images" src='images/imag.png' /></button>
 			</div>
 		</div>
 	</div>
 	<div id="myData"></div>
-	<div class="modal" id="create-student">
+	<div class="modal" id="filter">
         <div class="modal-body">
 			<div class="header-border">
 				<h2>Выбор отображаемых атрибутов</h2>
 			</div>
 			<div class="modal-main">
-				<div class="checkbox" id="1">
+				<!--<div class="checkbox" id="1">
 					<input type="checkbox" id="checkbox_1">
 					<label for="checkbox_1">Общее</label>
-					<img style="height:15px;" type="images" src='images/vector-down.png'/>
+					<img class="img" style="height:15px;" type="images" src='images/vector-down.png'/>
 				</div>
 				<div id="1" class="checkboxes2layer">
 					<div class="checkbox2layer">
@@ -144,84 +202,86 @@
 				<div class="checkbox" id="2">
 					<input type="checkbox" id="checkbox_2">
 					<label for="checkbox_2">Деньги</label>
-					<img style="height:15px;" type="images" src='images/vector-down.png'/>
+					<img class="img" style="height:15px;" type="images" src='images/vector-down.png'/>
 				</div>
 				<div id="2" class="checkboxes2layer">
 					<div class="checkbox2layer">
 						<input type="checkbox" id="checkbox_16">
-						<label for="checkbox_11">Юани</label>
+						<label for="checkbox_16">Юани</label>
 					</div>
 					<div class="checkbox2layer">
 						<input type="checkbox" id="checkbox_17">
-						<label for="checkbox_12">Рубли</label>
+						<label for="checkbox_17">Рубли</label>
 					</div>
 					<div class="checkbox2layer">
 						<input type="checkbox" id="checkbox_18">
-						<label for="checkbox_13">Наличные</label>
+						<label for="checkbox_18">Наличные</label>
 					</div>
 					<div class="checkbox2layer">
 						<input type="checkbox" id="checkbox_19">
-						<label for="checkbox_14">Центы</label>
+						<label for="checkbox_19">Центы</label>
 					</div>
 					<div class="checkbox2layer">
 						<input type="checkbox" id="checkbox_20">
-						<label for="checkbox_15">Безнал</label>
+						<label for="checkbox_20">Безнал</label>
 					</div>
 				</div>
 				<div class="checkbox" id="3">
 					<input type="checkbox" id="checkbox_3">
 					<label for="checkbox_3">Импортозамещение</label>
-					<img style="height:15px;" type="images" src='images/vector-down.png'/>
+					<img class="img" style="height:15px;" type="images" src='images/vector-down.png'/>
 				</div>
 				<div id="3" class="checkboxes2layer">
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_11">
-						<label for="checkbox_11">Хранилище</label>
+						<input type="checkbox" id="checkbox_21">
+						<label for="checkbox_21">Хранилище</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_12">
-						<label for="checkbox_12">Убежище</label>
+						<input type="checkbox" id="checkbox_22">
+						<label for="checkbox_22">Убежище</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_13">
-						<label for="checkbox_13">Бомбардировка</label>
+						<input type="checkbox" id="checkbox_23">
+						<label for="checkbox_23">Бомбардировка</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_14">
-						<label for="checkbox_14">Шкаф</label>
+						<input type="checkbox" id="checkbox_24">
+						<label for="checkbox_24">Шкаф</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_15">
-						<label for="checkbox_15">Чумодан</label>
+						<input type="checkbox" id="checkbox_25">
+						<label for="checkbox_25">Чумодан</label>
 					</div>
 				</div>
 				<div class="checkbox" id="4">
 					<input type="checkbox" id="checkbox_4">
 					<label for="checkbox_4">Без группы</label>
-					<img style="height:15px;" type="images" src='images/vector-down.png'/>
+					<img class="img" style="height:15px;" type="images" src='images/vector-down.png'/>
 				</div>
 				<div id="4" class="checkboxes2layer">
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_11">
-						<label for="checkbox_11">Один</label>
+						<input type="checkbox" id="checkbox_26">
+						<label for="checkbox_26">Один</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_12">
-						<label for="checkbox_12">Два</label>
+						<input type="checkbox" id="checkbox_27">
+						<label for="checkbox_27">Два</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_13">
-						<label for="checkbox_13">Намбака</label>
+						<input type="checkbox" id="checkbox_28">
+						<label for="checkbox_28">Намбака</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_14">
-						<label for="checkbox_14">Кровавый парень</label>
+						<input type="checkbox" id="checkbox_29">
+						<label for="checkbox_29">Кровавый парень</label>
 					</div>
 					<div class="checkbox2layer">
-						<input type="checkbox" id="checkbox_15">
-						<label for="checkbox_15">Последний Серафим</label>
+						<input type="checkbox" id="checkbox_30">
+						<label for="checkbox_30">Последний Серафим</label>
 					</div>
-				</div>
+				</div>-->
+			</div>
+			<div class="form-control">
 				<div class="form-group buttons">
 					<button class="btn btn-danger" type="submit" id="close">Отменить</button>
 					<button class="btn btn-success" type="submit" id="save">Сохранить</button>
@@ -229,28 +289,46 @@
 			</div>
         </div>
     </div>
+	<div id="myData"></div>
+	<div class="modal" id="filterModalSystems">
+        <div class="modal-body">
+			<div class="header-border">
+				<h2>Значения для поиска</h2>
+			</div>
+			<div class="modal-main">
+				<div class="labelAttribute">
+					<label>Атрибут: Наименование системы</label>
+				</div>
+				<div class="checkbox" id="5">
+					<input type="checkbox" id="checkbox_31">
+					<label for="checkbox_31">Гарант</label>
+				</div>
+				<div class="checkbox" id="6">
+					<input type="checkbox" id="checkbox_32">
+					<label for="checkbox_32">Система учета ИТ активов (1С УИТА) только ИТ</label>
+				</div>	
+			</div>
+			<div class="form-control">
+				<div class="form-group buttons">
+					<button class="btn btn-danger" type="submit" id="closSystem">Отменить</button>
+					<button class="btn btn-success" type="submit" id="savSestem">Сохранить</button>
+				</div>
+			</div>
+        </div>
+    </div>
 	<script language="javascript" type="text/javascript" src="js/app.js"></script>
-	<!--<script type="text/javascript">
-		fetch('data.json')
-			.then(function (response) {
-				return response.json();
-			})
-			.then(function (data) {
-				appendData(data);
-			})
-			.catch(function (err) {
-				console.log('error: ' + err);
-			});
-
-		function appendData(data) {
+	<script language="javascript" type="text/javascript" src="js/requests.js"></script>
+	<script type="text/javascript">
+		/*function appendData(data) {
 			let mainContainer = document.getElementById("r");
 			for (let i = 0; i < data.length; i++) {
-				let div = document.createElement("div");
-				div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+				/*let div = document.createElement("div");
+				div.innerHTML = 'Name: ' + data[i].filterSystem + ' ' + data[i].filterServices + ' ' + data[i].filterNaimSystems + ' ' + data[i].filterShortNaim + ' ' + data[i].filterFullNaim;
 				mainContainer.appendChild(div);
+				console.log('Name: ' + data[i].filterSystem + ' ' + data[i].filterServices + ' ' + data[i].filterNaimSystems + ' ' + data[i].filterShortNaim + ' ' + data[i].filterFullNaim);
 			}
-		}
-	</script>"-->
+		}*/
+	</script>
 </body>
 
 </html>

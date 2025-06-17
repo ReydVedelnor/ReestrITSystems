@@ -1,0 +1,194 @@
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background: #009CFF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+  
+  .group-list {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .group-button {
+    border: 1.5px solid #009CFF;
+    color: #009CFF;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  
+  .group-button:hover {
+    background: #f0f8ff;
+  }
+  
+  .arrow {
+    font-size: 22px;
+    transition: transform 0.2s;
+  }
+  
+  .group-button:hover .arrow {
+    transform: translateX(5px);
+  }
+  
+  .footer {
+    font-weight: 400;
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  
+  .add-group {
+    background-color: #339CFF;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .edit-container {
+    font-family: 'Montserrat', sans-serif;
+    margin: 40px auto;
+
+    margin-top: -10px;
+    width: 90%;
+    height: 500px;
+    border: 1px solid #009CFF;
+    border-radius: 20px;
+    padding: 30px;
+  }
+  
+  .group-name-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    padding: 30px;
+  }
+  
+  .group-name-block input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1.5px solid #009CFF;
+  }
+  
+  .attributes-block h3 {
+    display: flex;
+    justify-content: center;
+    color: #009CFF;
+    font-weight: 400;
+    margin-top: -10px;
+  }
+  
+  .attributes-block label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+  
+  .add-attr {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 15px;
+    background-color: #3F8EFC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .buttons {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 30px;
+    margin-right: 60px;
+  }
+  
+  .cancel {
+    background-color: #FF005C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .save {
+    background-color: #00C236;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .cancel-button {
+    background-color: #ff0055;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e6004c;
+  }
+  
+  .save-button {
+    background-color: #00cc33;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .save-button:hover {
+    background-color: #00b32c;
+  }
+  
+  

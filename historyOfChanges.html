@@ -1,0 +1,107 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>External CSS Example</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$("li").click(function(e) {
+			  e.preventDefault();
+			  $("li").removeClass("active");
+			  $(this).addClass("active");
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<header class="header"> <!--style="background-color: #00BFFF; height: 45px; display: flex;"-->
+		<div class="dropdown">
+			<img style='width: 20px;' type="images" src='images/menus.png'>
+			<div class="dropdown-content">
+				<a href="groupes.php">Группы</a>
+				<a href="">Атрибуты</a>
+				<a href="historyOfChanges.html">История изменений</a>
+			</div>
+		</div>
+		<p class="main">История изменений</p>
+		<p class="admin">admin</p>
+	</header>
+	<div class="homePageHistory">
+		<div class="backgroundExternal"> 
+			<div class="backgroundTable">
+				<table class="border-none">
+					<thead style="position: sticky; inset-block-start: -20px; background-color: white;">
+						<tr class="horizintalFramesHeader">
+							<td id="r" class="backgroundText "> <!--top-left-corner-->
+								<div class="filter-text" style="width: 60%;">ID</div> 
+							</td>
+							<td class="backgroundText"> 
+								<div class="filter-text" style="width: 60%;">Пользователь</div>
+							</td>
+							<td class="backgroundText">
+								<div class="filter-text" style="width: 60%;">Наименование системы</div>
+							</td>
+							<td class="backgroundText insideTheHeader">
+								<div class="filter-text" style="width: 60%;">Название группы</div>
+							</td>
+							<td class="backgroundText insideTheHeader">
+								<div class="filter-text" style="width: 60%;">Атрибут</div>
+							</td>
+							<td class="backgroundText insideTheHeader">
+								<div class="filter-text" style="width: 60%;">Значение атрибута</div>
+							</td>
+							<td class="backgroundText insideTheHeader">
+								<div class="filter-text" style="width: 60%;">Дата</div>
+							</td>
+							<td class="backgroundText insideTheHeader"> <!--top-right-corner-->
+								<div class="filter-text" style="width: 60%;">Время</div>
+							</td>
+						</tr>
+					</thead>
+					<tbody id="tbody" class="tbody">
+							<!--<tr class="horizintalFrames">
+								<td class="backgroundLinesText" onclick="#"> Гарант</td>
+								<td class="backgroundLinesText" onclick="#"> LBA.61 2025</td>
+								<td class="backgroundLinesText" onclick="#"> Гарант</td>
+								<td class="backgroundLinesText" onclick="#"> Гарант</td>
+								<td class="backgroundLinesText" onclick="#"> Информационно-справочная система “Гарант”</td>
+							</tr>
+							<tr class="horizintalFrames">
+								<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
+								<td class="backgroundLinesText" onclick="#"> LBA.61 2025</td>
+								<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
+								<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА) только ИТ</td>
+								<td class="backgroundLinesText" onclick="#"> Система учета ИТ активов (1С УИТА)</td>
+							</tr>-->
+					</tbody>
+				</table>
+			</div>
+			<div style="display:flex; justify-content:space-between"> <!--style="margin-top: 10px;"-->
+				<div class="buttonDiv">
+					<button title="buttonAddition" class="btButton"> Назад </button>
+				</div>
+				<button title="filter" class="filterBottomHistory"><img type="images" src='images/imag.png' /></button>
+			</div>
+		</div>
+	</div>
+	<script language="javascript" type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+		/*function appendData(data) {
+			let mainContainer = document.getElementById("r");
+			for (let i = 0; i < data.length; i++) {
+				/*let div = document.createElement("div");
+				div.innerHTML = 'Name: ' + data[i].filterSystem + ' ' + data[i].filterServices + ' ' + data[i].filterNaimSystems + ' ' + data[i].filterShortNaim + ' ' + data[i].filterFullNaim;
+				mainContainer.appendChild(div);
+				console.log('Name: ' + data[i].filterSystem + ' ' + data[i].filterServices + ' ' + data[i].filterNaimSystems + ' ' + data[i].filterShortNaim + ' ' + data[i].filterFullNaim);
+			}
+		}*/
+	</script>
+</body>
+
+</html>

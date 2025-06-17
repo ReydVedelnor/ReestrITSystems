@@ -1,17 +1,26 @@
 [
   {
     "id": "1",
-    "firstName": "John",
-    "lastName": "Doe"
+    "filterSystem": "Гарант",
+    "filterServices": "LBA.61 2025",
+	"filterNaimSystems": "Гарант",
+    "filterShortNaim": "Гарант",
+	"filterFullNaim": "Информационно-справочная система “Гарант”"
   },
   {
     "id": "2",
-    "firstName": "Mary",
-    "lastName": "Peterson"
+    "filterSystem": "Система учета ИТ активов (1С УИТА) только ИТ",
+    "filterServices": "LBA.61 2025",
+	"filterNaimSystems": "Система учета ИТ активов (1С УИТА) только ИТ",
+    "filterShortNaim": "Система учета ИТ активов (1С УИТА) только ИТ",
+	"filterFullNaim": "Система учета ИТ активов (1С УИТА)"
   },
   {
     "id": "3",
-    "firstName": "George",
-    "lastName": "Hansen"
+    "filterSystem": "Система учета ИТ",
+    "filterServices": "LBA.61 2030",
+	"filterNaimSystems": "Система учета ИТ активов",
+    "filterShortNaim": "Система учета ИТ активов",
+	"filterFullNaim": "Система учета ИТ"
   }
 ]
